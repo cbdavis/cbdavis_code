@@ -22,7 +22,12 @@ if (isset($_POST) && $callback == "") { //multiple queries
 	file_put_contents('php://stderr', 'Post Contents - ');
 	file_put_contents('php://stderr', print_r($_POST, true));
 
-	$RCommand = "Rscript ReconciliationAPI.R ".escapeshellarg($_POST['queries']);
+        //TODO allow for graceful failure
+        if (isset($_POST['queries'])){
+                $RCommand = "Rscript ReconciliationAPI.R ".escapeshellarg($_POST['queries']);
+        } else {
+                $RCommand = "Rscript ReconciliationAPI.R ".escapeshellarg($_POST['query']);
+        }
 
 	file_put_contents('php://stderr', 'encoding is '.mb_detect_encoding($_POST['queries']));
 
