@@ -1,7 +1,6 @@
 ### Author: Chris Davis
-### E-mail: c.b.davis@rug.nl
-### Website: http://chrisdavis.weblog.tudelft.nl/
-###          http://wiki.tudelft.nl/bin/view/Main/ChrisDavis
+### E-mail: chris@cbdavis.org
+### Website: http://cbdavis.org
 ### 
 ### This code downloads the input-output make and use tables 
 ### from the US Bureau of Economic Analysis, and then does some 
